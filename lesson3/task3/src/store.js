@@ -4,9 +4,9 @@ import userReducer from "./user.reducer";
 import languageReducer from "./language.reducer";
 
 const appReducer = combineReducers({
-  cart: cartReducer,
-  user: userReducer,
   language: languageReducer,
+  user: userReducer,
+  cart: cartReducer,
 });
 
 const store = createStore(
