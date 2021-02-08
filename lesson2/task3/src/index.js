@@ -1,4 +1,4 @@
-import { addUser, removeUser } from "./users.actions";
+import { addUser, deleteUser } from "./users.actions";
 import store from "./store";
 
 store.subscribe(() => {
@@ -6,5 +6,5 @@ store.subscribe(() => {
 });
 
 store.dispatch(addUser({ name: "Tom", id: 34 }));
-store.dispatch(removeUser(34));
+store.dispatch(deleteUser(34));
 store.dispatch(addUser({ name: "Jane", id: 21 }));

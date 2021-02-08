@@ -1,5 +1,5 @@
 const ADD_USER = "ADD_USER";
-const REMOVE_USER = "REMOVE_USER";
+const DELETE_USER = "REMOVE_USER";
 
 export const addUser = (newUser) => {
   return {
@@ -8,9 +8,9 @@ export const addUser = (newUser) => {
   };
 };
 
-export const removeUser = (id) => {
+export const deleteUser = (id) => {
   return {
-    type: REMOVE_USER,
+    type: DELETE_USER,
     payload: id,
   };
 };
