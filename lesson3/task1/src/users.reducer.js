@@ -26,7 +26,7 @@ const usersReducer = (state = initialState, action) => {
         usersList: state.usersList.map((user) => {
           if (user.id === action.payload.id) {
             return {
-              ...state,
+              ...user,
               ...action.payload.userData,
             };
           }
