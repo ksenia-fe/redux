@@ -12,7 +12,7 @@ export const addProduct = (productData) => {
 
 export const removeProduct = (id) => {
   return {
-    type: ADD_PRODUCT,
+    type: REMOVE_PRODUCT,
     payload: {
       id,
     },
