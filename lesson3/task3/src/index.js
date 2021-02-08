@@ -5,9 +5,9 @@ import { setLanguage } from "./language.actions";
 
 store.subscribe(() => console.log(store.getState()));
 
-store.dispatch(addProduct());
-store.dispatch(addProduct());
-store.dispatch(removeProduct());
+store.dispatch(addProduct({ id: 3, name: "efdsv" }));
+store.dispatch(addProduct({ id: 4, name: "OK" }));
+store.dispatch(removeProduct(4));
 
 store.dispatch(setUser({ name: "Jane", id: 21 }));
 store.dispatch(removeUser());
