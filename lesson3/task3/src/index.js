@@ -13,4 +13,4 @@ store.dispatch(setUser({ name: "Jane", id: 21 }));
 store.dispatch(removeUser());
 store.dispatch(setUser({ name: "Tomas", id: 3 }));
 
-store.dispatch(setLanguage("en"));
+store.dispatch(setLanguage("bg"));
