@@ -9,20 +9,18 @@ export const increment = () => {
     type: INCREMENT,
   };
 };
-
 export const decrement = () => {
   return {
     type: DECREMENT,
   };
 };
-
 export const reset = () => {
   return {
     type: RESET,
   };
 };
 
-export const initialState = {
+const initialState = {
   history: [],
 };
 
@@ -36,7 +34,7 @@ export const counterReducer = (state = initialState, action) => {
     case DECREMENT:
       return {
         ...state,
-        history: state.history.concat(-1),
+        history: state.history.concat("-1"),
       };
     case RESET:
       return {
