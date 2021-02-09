@@ -1,20 +1,14 @@
-export const ADD_USER = "ADD_USER";
-export const DELETE_USER = "DELETE_USER";
+export const NEXT_PAGE = "NEXT_PAGE";
+export const PREV_PAGE = "PREV_PAGE";
 
-export const addUser = (newUser) => {
+export const nextPage = () => {
   return {
-    type: ADD_USER,
-    payload: {
-      newUser,
-    },
+    type: NEXT_PAGE,
   };
 };
 
-export const deleteUser = (id) => {
+export const prevPage = () => {
   return {
-    type: DELETE_USER,
-    payload: {
-      id,
-    },
+    type: PREV_PAGE,
   };
 };
