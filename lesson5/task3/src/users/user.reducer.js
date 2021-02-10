@@ -68,7 +68,7 @@ const userReducer = (state = initialState, action) => {
     case HANDLE_TEXT: {
       return {
         ...state,
-        filterText: event.target.value,
+        filterText: action.payload.text,
       };
     }
     default:
