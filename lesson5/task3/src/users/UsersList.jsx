@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import User from "./User.jsx";
-import Filter from "./Filter.jsx";
+import Filter from "../Filter.jsx";
 import { HandleFilterText } from "./user.actions";
 import { filteredUsersSelector, filterTextSelector } from "./users.selectors";
 
