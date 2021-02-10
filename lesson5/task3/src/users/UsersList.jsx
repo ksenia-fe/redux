@@ -3,19 +3,9 @@ import { connect } from "react-redux";
 import User from "./User.jsx";
 import Filter from "./Filter.jsx";
 import { HandleFilterText } from "./user.actions";
-import { usersListSelector, filterTextSelector } from "./users.selectors";
-
-// algo
-// 1. сделать фильтрацию в селекторе ++
-// 2. отслеживать изменения фильтр-текста
+import { filteredUsersSelector, filterTextSelector } from "./users.selectors";
 
 const UsersList = ({ users, text, action }) => {
-  // const inputHandler = (event) => {
-  //   this.setState({
-  //     filterText: event.target.value,
-  //   });
-  // };
-
   return (
     <div>
       <Filter text={text} count={users.length} onChange={action} />
@@ -30,7 +20,7 @@ const UsersList = ({ users, text, action }) => {
 
 const mapState = (state) => {
   return {
-    users: usersListSelector(state),
+    users: filteredUsersSelector(state),
     text: filterTextSelector(state),
   };
 };

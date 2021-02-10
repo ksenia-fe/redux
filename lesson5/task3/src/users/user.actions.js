@@ -1,17 +1,7 @@
-// export const FILTER = "USERS/FILTER";
 export const HANDLE_TEXT = "HANDLE_TEXT";
 
-// export const filterUsers = () => {
-//   return {
-//     type: FILTER,
-//   };
-// };
-
-export const HandleFilterText = (event) => {
+export const HandleFilterText = () => {
   return {
     type: HANDLE_TEXT,
-    payload: {
-      event,
-    },
   };
 };

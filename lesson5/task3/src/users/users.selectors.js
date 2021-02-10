@@ -1,6 +1,4 @@
-import React from "react";
-
-export const usersListSelector = (state) => {
+export const filteredUsersSelector = (state) => {
   return state.users.usersList.filter((user) =>
     user.name.toLowerCase().includes(state.users.filterText.toLowerCase())
   );
