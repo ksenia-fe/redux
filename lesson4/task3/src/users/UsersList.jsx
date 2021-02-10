@@ -1,9 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-
 import User from "./User.jsx";
 import Pagination from "./Pagination";
-
 import * as usersActions from "./users.actions";
 
 const UsersList = ({ users, prevPage, nextPage }) => {
