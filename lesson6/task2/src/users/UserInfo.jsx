@@ -1,6 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { isFetchingSelector, userDataSelector } from "./users.selectors";
+import Spinner from "./Spinner";
 
-const User = ({ userData }) => {
+const UserInfo = ({ userData, isFetching }) => {
+  if (isFetching) {
+    return <Spinner />;
+  }
   if (!userData) {
     return null;
   }
@@ -8,15 +15,31 @@ const User = ({ userData }) => {
     <div className="user">
       <img
         alt="User Avatar"
-        src="https://avatars0.githubusercontent.com/u/10639145?v=4"
+        src={userData.avatar_url}
         className="user__avatar"
       />
       <div className="user__info">
-        <span className="user__name">Apple</span>
-        <span className="user__location">Cupertino, CA</span>
+        <span className="user__name">{userData.name}</span>
+        <span className="user__location">{userData.location}</span>
       </div>
     </div>
   );
 };
 
-export default User;
+UserInfo.propTypes = {
+  isFetching: PropTypes.bool.isRequired,
+  userData: PropTypes.shape(),
+};
+
+UserInfo.defaultValue = {
+  userData: null,
+};
+
+const mapState = (state) => {
+  return {
+    isFetching: isFetchingSelector(state),
+    userData: userDataSelector(state),
+  };
+};
+
+export default connect(mapState)(UserInfo);

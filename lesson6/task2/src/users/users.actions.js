@@ -10,7 +10,7 @@ export const showSpinner = () => {
 
 export const userDataRecieved = (userData) => {
   return {
-    type: SHOW_SPINNER,
+    type: USER_DATA_RECIEVED,
     payload: {
       userData,
     },
